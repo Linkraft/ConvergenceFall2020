@@ -411,10 +411,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -471,10 +471,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 335780634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604d885516cd21045ba51610eb80ae87, type: 3}
+  m_Script: {fileID: 11500000, guid: 602dd9d4ebcb9494a8b31592f5bab3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 2056324752}
   uiText: {fileID: 284471900}
 --- !u!1 &545104390
 GameObject:
@@ -847,7 +846,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1497483180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25921933e7437684bad7bad20406cfd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ed15225ec498b448aa6502cf61e8cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   upEvent:

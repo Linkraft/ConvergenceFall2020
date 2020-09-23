@@ -1,21 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TextSpeech;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
+
+
 
 public class VoiceController : MonoBehaviour
 {
     const string LANG_CODE = "en-US";
 
-    //gameObject
-    public GameObject cube;
-
     [SerializeField]
     Text uiText;
 
-    void Update()
+    void Start()
     {
         Setup(LANG_CODE);
 
@@ -25,19 +25,11 @@ public class VoiceController : MonoBehaviour
         SpeechToText.instance.onResultCallback = OnFinalSpeechResult;
         TextToSpeech.instance.onStartCallBack = OnSpeakStart;
         TextToSpeech.instance.onDoneCallback = OnSpeakStop;
-
-        //activate and deactivate gameObject
-        if ((uiText.text == "Cube") || (uiText.text == "cube"))
-        {
-            cube.SetActive(true);
-        }
-        if ((uiText.text == "Remove") || (uiText.text == "remove"))
-        {
-            cube.SetActive(false);
-        }
-
         CheckPermission();
+
     }
+
+
 
     void CheckPermission()
     {
@@ -48,9 +40,9 @@ public class VoiceController : MonoBehaviour
 #endif
     }
 
-#region Text to Speech
-
-    public void StartSpeaking(string message){
+    #region Text to Speech
+    public void StartSpeaking(string message)
+    {
         TextToSpeech.instance.StartSpeak(message);
     }
 
@@ -59,7 +51,8 @@ public class VoiceController : MonoBehaviour
         TextToSpeech.instance.StopSpeak();
     }
 
-    void OnSpeakStart(){
+    void OnSpeakStart()
+    {
         Debug.Log("Talking Started...");
     }
     void OnSpeakStop()
@@ -68,9 +61,11 @@ public class VoiceController : MonoBehaviour
     }
 #endregion
 
+
 #region Speech to Text
 
-    public void StartListening(){
+    public void StartListening()
+    {
         SpeechToText.instance.StartRecording();
     }
 
@@ -79,7 +74,8 @@ public class VoiceController : MonoBehaviour
         SpeechToText.instance.StopRecording();
     }
 
-    void OnFinalSpeechResult(string result){
+    void OnFinalSpeechResult(string result)
+    {
         uiText.text = result;
     }
 
@@ -90,8 +86,12 @@ public class VoiceController : MonoBehaviour
 
 
 #endregion
-    void Setup(string code){
-        TextToSpeech.instance.Setting(code, 1, 1);
-        SpeechToText.instance.Setting(code);
+
+
+
+    void Setup(string code)
+    {
+            TextToSpeech.instance.Setting(code, 1, 1);
+            SpeechToText.instance.Setting(code);
     }
 }
