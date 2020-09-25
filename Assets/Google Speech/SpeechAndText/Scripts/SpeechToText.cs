@@ -92,6 +92,7 @@ namespace TextSpeech
 
         public void onMessage(string _message)
         {
+            Debug.Log(_message);
         }
         public void onErrorMessage(string _message)
         {
@@ -100,6 +101,7 @@ namespace TextSpeech
         /** Called when recognition results are ready. */
         public void onResults(string _results)
         {
+            Debug.Log(_results);
             if (onResultCallback != null)
                 onResultCallback(_results);
         }

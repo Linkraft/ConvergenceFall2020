@@ -73,6 +73,9 @@ namespace GoogleARCore.Examples.HelloAR
         /// </summary>
         private bool m_IsQuitting = false;
 
+        private GameObject character;
+        public bool unlocked = true;
+
         /// <summary>
         /// The Unity Awake() method.
         /// </summary>
@@ -154,19 +157,29 @@ namespace GoogleARCore.Examples.HelloAR
                         prefab = GameObjectHorizontalPlanePrefab;
                     }
 
-                    // Instantiate prefab at the hit pose.
-                    var gameObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
-
-                    // Compensate for the hitPose rotation facing away from the raycast (i.e.
-                    // camera).
-                    gameObject.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
+                    if (character == null)
+                    {
+                        // Instantiate prefab at the hit pose.
+                        character = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+                        // Compensate for the hitPose rotation facing away from the raycast (i.e.
+                        // camera).
+                        character.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
+                    }
+                    else
+                    {
+                        // Or move the already spawned object if possible
+                        if (unlocked)
+                        {
+                            character.transform.position = hit.Pose.position;
+                        }
+                    }
 
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of
                     // the physical world evolves.
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
 
                     // Make game object a child of the anchor.
-                    gameObject.transform.parent = anchor.transform;
+                    character.transform.parent = anchor.transform;
                 }
             }
         }
