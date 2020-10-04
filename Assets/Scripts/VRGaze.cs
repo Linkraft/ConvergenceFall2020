@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VRGaze : MonoBehaviour
 {
@@ -37,7 +38,8 @@ public class VRGaze : MonoBehaviour
         {
             if (imgGaze.fillAmount == 1 && hit.transform.CompareTag("SceneLoader"))
             {
-                Application.LoadLevel("Menu");
+                // Application.LoadLevel("Menu");
+                SceneManager.LoadScene(2);
             }
         } 
     }
