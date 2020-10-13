@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: cd94c71408d863841a446e067ed374bf
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Base_Tool_sideMat
+    second: {fileID: 2100000, guid: abe17bf202871454fad95b625f657aa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Cover_Tool_holderMat
+    second: {fileID: 2100000, guid: 6d845f5bf04951941b266fc55e2a5dd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_holder_MainMat
+    second: {fileID: 2100000, guid: 042859c0f6e3d494c803177257545e5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Bowl_Bowl1Mat
+    second: {fileID: 2100000, guid: 4fc7aee57aefa3a47b2bf52c63b08572, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_ConnectorMat
+    second: {fileID: 2100000, guid: d0d43b928faa17842878acae4a5e708e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_HolderMat
+    second: {fileID: 2100000, guid: d1a94a31a0636a84faeab0c5a8e94e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Light_holder_baseMat
+    second: {fileID: 2100000, guid: 9ccb2c0c06a1be84fb6e525e5f88beaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Light_holder_bladeMat
+    second: {fileID: 2100000, guid: 27d2040abc2fdd0409f67e1162fd3f23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Light_holder_light_screenMat
+    second: {fileID: 2100000, guid: 38aa67205f481f44ca351b23bb83442b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Rods_rod2Mat
+    second: {fileID: 2100000, guid: fac3b8631fa0ce144b79fc555afa326e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Rods_rod3Mat
+    second: {fileID: 2100000, guid: 08d39d81a297ba74088932ae726c012f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Rods_rod4Mat
+    second: {fileID: 2100000, guid: bfd1f1dd9a58db1419f0d86355804956, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Rods_rod5Mat
+    second: {fileID: 2100000, guid: 29535251608fe37428779e117daa88de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Springs_spring2Mat
+    second: {fileID: 2100000, guid: 20333a4a820e37146b25d87b54cc2461, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Springs_spring3Mat
+    second: {fileID: 2100000, guid: e84593d61777c4648912fd50ea7f3ef7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_Springs_spring4Mat
+    second: {fileID: 2100000, guid: 8a1003d21b8e20c4f912d8d6fad5c3ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_bowl_holder_BowlMat
+    second: {fileID: 2100000, guid: ee3dd7a242a8e5d47a6335685b6dd337, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_jointMat
+    second: {fileID: 2100000, guid: e1e902dd0eaa5f94599229ef72a4ea20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_plate_Light_holderMat
+    second: {fileID: 2100000, guid: 23935efcb063cb3469190ef026510991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_rod1_RodsMat
+    second: {fileID: 2100000, guid: c0ca972a29a598a46bcedf4358f13ace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_Tool_side_spring1_SpringsMat
+    second: {fileID: 2100000, guid: dfdad00c61bddc34eb4b4dc717075768, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_Base2Mat
+    second: {fileID: 2100000, guid: 91dddb0c349e2e6438a1969e9cce59ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_BaseMat
+    second: {fileID: 2100000, guid: fbdc2993501d086449c74d3bfb2899bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_Frame_holderMat
+    second: {fileID: 2100000, guid: dfd6a68cf8c677943b4e8b3ac311fd52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_bottomMat
+    second: {fileID: 2100000, guid: f88f23ed89002e947954c4b9616bd69c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_centerMat
+    second: {fileID: 2100000, guid: aa1768dd9b633c948aaad08a7a837318, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_center_frameMat
+    second: {fileID: 2100000, guid: 33a074cf025602a43837706b6519418f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_connector2Mat
+    second: {fileID: 2100000, guid: 82a50f72ec60ff049bea5de53b259060, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_headMat
+    second: {fileID: 2100000, guid: f3992bfae77e01c46b78f3d414a530c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_bed_frame_topMat
+    second: {fileID: 2100000, guid: e64c158cb74dac141b4104f70a043fe3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dentist_Chair_connector1_bed_frameMat
+    second: {fileID: 2100000, guid: 3b9f5675cf4cadd48b71656919de43a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cushion_Dentist_Chair_body_cushionMat
+    second: {fileID: 2100000, guid: 6c8b2363c9556e9439e18b52547dae26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cushion_Dentist_Chair_leg_cushionMat
+    second: {fileID: 2100000, guid: 91e1cce8a2914fd4ca167cb1cb45a06b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: head_cushion_cushion_Dentist_ChairMat
+    second: {fileID: 2100000, guid: 884a31c6a2eb83146980086fa415e3f1, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 0
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
