@@ -34,6 +34,7 @@ using IBM.Cloud.SDK;
 using IBM.Cloud.SDK.Authentication.Iam;
 using IBM.Cloud.SDK.Utilities;
 using IBM.Cloud.SDK.DataTypes;
+using TMPro;
 
 public class SpeechToText : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class SpeechToText : MonoBehaviour
 
     [Tooltip("Text field to display the results of speech conversion.")]
     [SerializeField]
-    private Text spokenText;
+    private TMP_Text spokenText;
 
     [SerializeField]
     private InputField targetInputField;
@@ -76,7 +77,7 @@ public class SpeechToText : MonoBehaviour
 
     [SerializeField]
     private InputField outputInputField;
-    private Text outputText;
+    private TMP_Text outputText;
 
     private void Start()
     {
