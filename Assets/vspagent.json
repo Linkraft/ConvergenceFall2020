@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vspagent-icdq",
+  "private_key_id": "714e5a6d86ade6214aa90d7a8611b43eeb151c77",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDRuXeCs5o7QKXZ\nvaZeP6yQ9i2FfjetlPExlnZ/F7JgD9VARRhgT5TMqK2teKOGC51XsKNSQbqu8IER\njNUXbzcaOsSxaZDDq1WAhmTl9XwdJCqY/clgLS64OpOJ2oyMlmoeNUCkjwmV6wZn\n+MItIKIaEwdsPRlPd51U+aSb1Ft6L22xS3urQ6AkuPWYyQDACMObbE8+pZEfVT8S\nr9SeP5dIrU0xnsv6CgObCV1ghSWiPPitkbY9eX32O5VvP619rLuHTfPr0oFODdto\nHyc7qaMQr84Btg/qfmPTikqZakX0g3gfKg/uzajh5fl7V+5w6RoikIqtpZEADvaJ\n5aLvk09JAgMBAAECggEAEzIdGLb0qnC33W6o4B6G3nvR3dKYKQilbOr/LJHQL0+z\nrp7EZOhTz8mun96XZQkCHUkbIcfHXQTBY4hW5r60te9kGnL1n5s6h7mFWbD267no\nNjmgaW+pQ46E+4yn6aRI0TwBjy5Sa8jnvLN9nmDKxYUxXDxZaTcjDOiOov60YsHz\nAoQtjTl3nRxCwROzerwgQHJ/2nQo+eo7HXNjsPiLLQ3eYCa/E+avW+zhqQ6ecC9X\n4dtdSt499hjhcoCwhGSKo1hbuXZ+TpxEjL1DWDcxcCnrC9grStZZIfUUysNBuR0i\n2jUEviZplXfnJEeYEYy6QMv9t5DEV+Vf7K5zRcMHSQKBgQD7ieMVxZOl4z5bl+C0\nU17h59ydN1AaQN6OTfcuL48qBvmotP6ghrjpjBtvOZ2toXOfgFXOHfPEiSz6jJhI\nqSeuMuBYZGwBEl/JlED41tPnDTA4QY/YgBCXRbSjrDwFDMgRkIYxCBDIUsg5PNzi\n0CrEIVpoH/G0G022Xko0TCzaVQKBgQDVcbjtYW32bs6+56/gbqTCzMXciYq1EWla\nQPRvXP1ISzz7L1pnYm08g/urMaAntssYYkrxsbvC190j3P5IuT8UzZxQndFq3mJU\n9XENPAikVXdhx5vO2yI9dxmKgpITkOk3V2ZafNlE2xqRGWJMjiqNgWzTTJ7ONKM2\npqFCdUu9JQKBgHWYljjEgO2KGsoZbC0B2RcGHgbGKEXN0/51hrzp8SV101xDGdOU\niHhvTxgluIjHNVX5WqQdLqzQcN3FwyAdLPbsxCOu9ytdGrkT/XgYf0LC0KtMQ2K1\nJIyEQxpN2FWIDzTe+02K9sWgpgjUYnQLXCMLcMfDP22zYhaDaG+guUttAoGAdmId\n3GNmdwEcYFvme4dCkNy8fUY4DZd7pFhUepPL01YPm423CZJY3fCiHGBo4L4MxRh3\nUrhuWHIbsDF5Q+Ki7ynfIgN2TFzNkyuSqXF7pZHVpgDtFP0Lb6XoH5+t33ZHM6+h\nEF0gsIUJpiK7F5TeWx/GuSdNCTe+sqgW1uJxwJUCgYAxKxLTm6490fpAJVI64Oh1\nvj+efrHHRq0fYCZHE/0WSEsefkBaX5MGNYOUqYkyV9gUSmFkPpXK0pzsCxy42uJa\nNLOBEt2ey4sIqWZss/EMQCHWeer/SVHuroWF253npH/hINNvXDNJv/vgltPUfk5C\n/Tq/XIVpu4N8WUK9fMetmQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "testvspagentserviceaccount@vspagent-icdq.iam.gserviceaccount.com",
+  "client_id": "109065659830919900827",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/testvspagentserviceaccount%40vspagent-icdq.iam.gserviceaccount.com"
+}
