@@ -9,7 +9,7 @@ public class VRGaze : MonoBehaviour
 {
     public Image imgGaze;
     public float totalTime = 2;
-    bool gvrStatus;
+    public bool gvrStatus;
     float gvrTimer;
 
     public int distanceOfRay = 10;

@@ -66,23 +66,60 @@ namespace IBM.Watsson.Examples
         private AudioSource audioSource;
         private float duration;
         public UnityEvent onFinishSound;
-        public bool aim;
+        public bool aim = false;
+        int lineNumber = 0;
 
         void Start()
         {
             LogSystem.InstallDefaultReactors();
-            Runnable.Run(CreateService());
-           
+               
+        }
+
+        public void Update()
+        {
+             if (aim == false)
+            {
+/*                StopRecording();               
+                Debug.Log("OFF");
+
+                if (ResultsField.text.Contains("good morning"))
+                {                   
+                    Debug.Log("Line1Option1");
+                    changeClip(one);        
+                }*/
+            }
+
+            if (aim == true) //ResultsField.text.Contains("good morning"))  
+            {
+/*                StartRecording();
+                Debug.Log("Working");*/
+            } 
         }
 
         public void testingAimON()
         {
             aim = true;
+            //StartRecording();
+            //Debug.Log("true");
+            Runnable.Run(CreateService());
+            StartRecording();
+            Debug.Log("Working");
         }
 
         public void testingAimOff()
         {
             aim = false;
+            //StopRecording();
+            //Debug.Log("false");
+            
+            StopRecording();
+            Debug.Log("OFF");
+
+            if (ResultsField.text.Contains("good morning"))
+            {
+                Debug.Log("Line1Option1");
+                changeClip(one);
+            }
         }
 
         public void changeClip(AudioClip example)
@@ -94,7 +131,7 @@ namespace IBM.Watsson.Examples
             if (!audioSource.isPlaying)
             {
                 Debug.Log("Audio is Done");
-                StartRecording();
+                //StartRecording();
             }
         }
 
@@ -152,7 +189,7 @@ namespace IBM.Watsson.Examples
             }
         }
 
-        public void StartRecording()
+        private void StartRecording()
         {
             if (_recordingRoutine == 0)
             {
@@ -237,22 +274,20 @@ namespace IBM.Watsson.Examples
         private void OnRecognize(SpeechRecognitionEvent result)
         {
             
+
             if (result != null && result.results.Length > 0)
             {
                 foreach (var res in result.results)
                 {
                     foreach (var alt in res.alternatives)
                     {
-                        string text = alt.transcript; //string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
+                        string text = string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
                         Log.Debug("ExampleStreaming.OnRecognize()", text);
                         ResultsField.text = text;
-                        
-                        if (alt.transcript.Contains("good morning"))
+
+                        if (alt.transcript.Contains("good morning") && aim == false)
                         {
-                            StopRecording();
-                            Debug.Log("Listening");
-                            changeClip(one);
-                            
+                           // changeClip(one);
                         }
 
 
@@ -291,5 +326,5 @@ namespace IBM.Watsson.Examples
         }
     }
 
-    
+
 }
