@@ -41,6 +41,8 @@ namespace IBM.Watsson.Examples
         private string _serviceUrl;
         [Tooltip("Text field to display the results of streaming.")]
         public Text ResultsField;
+        [Tooltip("Dialog Manager")]
+        public DialogManager dm;
         [Header("IAM Authentication")]
         [Tooltip("The IAM apikey.")]
         [SerializeField]
@@ -53,6 +55,7 @@ namespace IBM.Watsson.Examples
         private string _recognizeModel;
         #endregion
 
+        private string userSpeech;
 
         private int _recordingRoutine = 0;
         private string _microphoneID = null;
@@ -71,36 +74,12 @@ namespace IBM.Watsson.Examples
 
         void Start()
         {
-            LogSystem.InstallDefaultReactors();
-               
-        }
-
-        public void Update()
-        {
-             if (aim == false)
-            {
-/*                StopRecording();               
-                Debug.Log("OFF");
-
-                if (ResultsField.text.Contains("good morning"))
-                {                   
-                    Debug.Log("Line1Option1");
-                    changeClip(one);        
-                }*/
-            }
-
-            if (aim == true) //ResultsField.text.Contains("good morning"))  
-            {
-/*                StartRecording();
-                Debug.Log("Working");*/
-            } 
+            LogSystem.InstallDefaultReactors();      
         }
 
         public void testingAimON()
         {
             aim = true;
-            //StartRecording();
-            //Debug.Log("true");
             Runnable.Run(CreateService());
             StartRecording();
             Debug.Log("Working");
@@ -108,31 +87,23 @@ namespace IBM.Watsson.Examples
 
         public void testingAimOff()
         {
-            aim = false;
-            //StopRecording();
-            //Debug.Log("false");
-            
+            aim = false;            
             StopRecording();
             Debug.Log("OFF");
 
-            if (ResultsField.text.Contains("good morning"))
-            {
-                Debug.Log("Line1Option1");
-                changeClip(one);
-            }
+            ResultsField.text = userSpeech;
+            if (dm == null) Debug.Log("FUCK");
+            dm.UpdateDialog(userSpeech);
+            changeClip(dm.CurrentClip());
+            Debug.Log("Wtf");
         }
 
         public void changeClip(AudioClip example)
         {
+            Debug.Log("Example:" + example.name);
             audioSource = GetComponent<AudioSource>();
             audioSource.clip = example;
             audioSource.Play();
-
-            if (!audioSource.isPlaying)
-            {
-                Debug.Log("Audio is Done");
-                //StartRecording();
-            }
         }
 
         private IEnumerator CreateService()
@@ -283,13 +254,8 @@ namespace IBM.Watsson.Examples
                     {
                         string text = string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
                         Log.Debug("ExampleStreaming.OnRecognize()", text);
-                        ResultsField.text = text;
-
-                        if (alt.transcript.Contains("good morning") && aim == false)
-                        {
-                           // changeClip(one);
-                        }
-
+                        text = text.Substring(0, text.IndexOf("("));
+                        userSpeech = text;
 
                     }
 
