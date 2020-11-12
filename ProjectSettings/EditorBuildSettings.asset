@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Mobile AR.unity
+    path: Assets/Scenes/MobileAR.unity
     guid: 731938d2a1d124c6d9ad44e7be31f9dc
   - enabled: 1
-    path: Assets/Scenes/Mobile VR.unity
+    path: Assets/Scenes/MobileVR1.unity
     guid: 6b82f3bc31e85454c997eb2c78f902e5
   - enabled: 1
     path: Assets/Scenes/Menu.unity
