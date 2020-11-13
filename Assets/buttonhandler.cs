@@ -7,7 +7,7 @@ public class buttonhandler : MonoBehaviour
 {
     public void VRButtonClick()
     {
-        SceneManager.LoadScene("MobileVR1");
+        SceneManager.LoadScene("Mobile VR");
     }
     public void ARButtonClick()
     {
