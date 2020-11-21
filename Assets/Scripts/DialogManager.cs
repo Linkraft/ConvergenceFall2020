@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
         public List<Dialog> children;
         public int numChildren;
         public AudioClip audioClip;
+        public bool hasPlayed;
 
         public Dialog(string id, bool fromUser, string dialogText)
         {
@@ -83,8 +84,8 @@ public class DialogManager : MonoBehaviour
 
         Dialog resp11 = new Dialog("resp1", false, "Is it? I have been coming here for 2 years and I still don't have proper teeth.");
 
-        Dialog user21 = new Dialog("user2", true, "We will have time to discuss that, let's start with updating your medical history.");
-        user21.keyPhrases = new List<string>(){ "updating", "medical", "history" };
+        Dialog user21 = new Dialog("user2", true, "We will have time to discuss that, let's start with updating your medical history. I will now take your blood pressure.");
+        user21.keyPhrases = new List<string>(){ "updating", "medical", "history", "blood", "pressure" };
         Dialog user22 = new Dialog("user3", true, "I'm sorry to hear that. May I know what the problem is?");
         user22.keyPhrases = new List<string>(){"sorry", "problem"};
 
@@ -162,7 +163,13 @@ public class DialogManager : MonoBehaviour
 
     public AudioClip CurrentClip()
     {
+        dt.currentDialog.hasPlayed = true;
         return dt.currentDialog.audioClip;
+    }
+
+    public Dialog CurrentDialog()
+    {
+        return dt.currentDialog;
     }
 
     // Start is called before the first frame update
@@ -196,6 +203,24 @@ public class DialogManager : MonoBehaviour
             }
         }
         Debug.Log("Current dialog: " + dt.currentDialog.id);
+    }
+
+    public List<string> GetNextDialogOptions()
+    {
+        List<string> options = new List<string>();
+        if (dt.currentDialog.id == "user1")
+        {
+            options.Add(dt.currentDialog.dialogText);
+        }
+        if (!dt.currentDialog.fromUser)
+        {
+            foreach(Dialog c in dt.currentDialog.children)
+            {
+                Debug.Log(c.dialogText);
+                options.Add(c.dialogText);
+            }
+        }
+        return options;
     }
 
     public Dialog ChooseRandomChild(Dialog dialog)

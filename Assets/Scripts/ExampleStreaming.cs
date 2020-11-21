@@ -92,10 +92,9 @@ namespace IBM.Watsson.Examples
             Debug.Log("OFF");
 
             ResultsField.text = userSpeech;
-            if (dm == null) Debug.Log("FUCK");
             dm.UpdateDialog(userSpeech);
-            changeClip(dm.CurrentClip());
-            Debug.Log("Wtf");
+            if (!dm.CurrentDialog().hasPlayed)
+                changeClip(dm.CurrentClip());
         }
 
         public void changeClip(AudioClip example)
