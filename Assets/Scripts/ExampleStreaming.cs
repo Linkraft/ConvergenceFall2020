@@ -91,7 +91,7 @@ namespace IBM.Watsson.Examples
             StopRecording();
             Debug.Log("OFF");
 
-            ResultsField.text = userSpeech;
+            if (ResultsField != null) ResultsField.text = userSpeech;
             dm.UpdateDialog(userSpeech);
             if (!dm.CurrentDialog().hasPlayed)
                 changeClip(dm.CurrentClip());

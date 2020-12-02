@@ -65,7 +65,7 @@ namespace GoogleARCore.Examples.HelloAR
         /// <summary>
         /// The rotation in degrees need to apply to prefab when it is placed.
         /// </summary>
-        private const float k_PrefabRotation = 180.0f;
+        private const float k_PrefabRotation = 90.0f;
 
         /// <summary>
         /// True if the app is in the process of quitting due to an ARCore connection error,
