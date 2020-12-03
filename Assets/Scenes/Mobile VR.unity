@@ -6029,12 +6029,12 @@ GameObject:
   - component: {fileID: 1393353327}
   - component: {fileID: 1393353326}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: TV Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1393353326
 MonoBehaviour:
   m_ObjectHideFlags: 0

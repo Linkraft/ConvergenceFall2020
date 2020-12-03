@@ -112,19 +112,19 @@ public class DialogManager : MonoBehaviour
         user38.keyPhrases = new List<string>() {"mind", "ask", "questions"};
 
         Dialog resp31 = new Dialog("resp6", false, "Ok, fine.");
-        Dialog resp32 = new Dialog("resp7", false, "Really? Fine then.");
-        Dialog resp33 = new Dialog("resp8", false, "No, I am fine.");
+        //Dialog resp32 = new Dialog("resp7", false, "Really? Fine then.");
+        //Dialog resp33 = new Dialog("resp8", false, "No, I am fine.");
         Dialog resp34 = new Dialog("resp9", false, "Yes, I have high blood pressure.");
-        Dialog resp35 = new Dialog("resp10", false, "I am fine. Thank you.");
+        Dialog resp35 = new Dialog("resp10", false, "No, I am fine. Thank you.");
         Dialog resp36 = new Dialog("resp11", false, "Well, I had colon cancer three years ago.");
-        Dialog resp37 = new Dialog("resp12", false, "Okay, can I trust you?");
+        //Dialog resp37 = new Dialog("resp12", false, "Okay, can I trust you?");
         Dialog resp38 = new Dialog("resp13", false, "Okay, thank you.");
-        Dialog resp39 = new Dialog("resp14", false, "Okay, thank God.");
+        //Dialog resp39 = new Dialog("resp14", false, "Okay, thank God.");
         Dialog resp310 = new Dialog("resp15", false, "Okay, I hope so too.");
-        Dialog resp311 = new Dialog("resp16", false, "Can I talk to your instructor?");
+        //Dialog resp311 = new Dialog("resp16", false, "Can I talk to your instructor?");
         Dialog resp312 = new Dialog("resp17", false, "Okay, I hope you can find a solution for me.");
         Dialog resp313 = new Dialog("resp18", false, "Yes, please.");
-        Dialog resp314 = new Dialog("resp19", false, "I thought I had explained everything to you already.");
+        //Dialog resp314 = new Dialog("resp19", false, "I thought I had explained everything to you already.");
         #endregion
 
         #region Link dialogs
@@ -145,19 +145,14 @@ public class DialogManager : MonoBehaviour
         resp24.AddChild( user37);
         resp24.AddChild( user38);
         user31.AddChild( resp31);
-        user32.AddChild( resp32);
-        user33.AddChild( resp33);
+        user32.AddChild( resp31);
         user33.AddChild( resp34);
-        user34.AddChild( resp35);
+        user33.AddChild( resp35);
         user34.AddChild( resp36);
-        user35.AddChild( resp37);
         user35.AddChild( resp38);
-        user36.AddChild( resp39);
         user36.AddChild( resp310);
-        user37.AddChild( resp311);
         user37.AddChild( resp312);
         user38.AddChild( resp313);
-        user38.AddChild( resp314);
         #endregion
     }
 
