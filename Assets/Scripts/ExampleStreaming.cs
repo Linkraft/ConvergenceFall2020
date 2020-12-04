@@ -65,6 +65,12 @@ namespace IBM.Watsson.Examples
 
         private SpeechToTextService _service;
 
+        GameObject paul;
+        GameObject logan;
+        public Animator paulAnimator;
+        public Animator loganAnimator;
+
+        public bool isFirstChar;
         public AudioClip one;
         private AudioSource audioSource;
         private float duration;
@@ -74,13 +80,32 @@ namespace IBM.Watsson.Examples
 
         void Start()
         {
-            LogSystem.InstallDefaultReactors();      
+            paul = GameObject.Find("C1");
+            logan = GameObject.Find("C2");
+            LogSystem.InstallDefaultReactors();
+        }
+
+        private void Update()
+        {
+            paul.SetActive(isFirstChar);
+            logan.SetActive(!isFirstChar);
         }
 
         public void testingAimON()
         {
             aim = true;
             Runnable.Run(CreateService());
+            dm.UpdateDialog("");
+            if (isFirstChar)
+            {
+                Debug.Log("On look animation state: " + dm.CurrentState());
+                paulAnimator.SetInteger("State", dm.CurrentState());
+            }
+            else
+            {
+                Debug.Log("On look animation state: " + dm.CurrentState());
+                loganAnimator.SetInteger("State", dm.CurrentState());
+            }
             StartRecording();
             Debug.Log("Working");
         }
@@ -93,6 +118,16 @@ namespace IBM.Watsson.Examples
 
             if (ResultsField != null) ResultsField.text = userSpeech;
             dm.UpdateDialog(userSpeech);
+            if (isFirstChar)
+            {
+                Debug.Log("Off look animation state: " + dm.CurrentState());
+                paulAnimator.SetInteger("State", dm.CurrentState());
+            }
+            else
+            {
+                Debug.Log("Off look animation state: " + dm.CurrentState());
+                loganAnimator.SetInteger("State", dm.CurrentState());
+            }
             if (!dm.CurrentDialog().hasPlayed)
                 changeClip(dm.CurrentClip());
         }

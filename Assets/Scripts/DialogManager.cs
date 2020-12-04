@@ -16,14 +16,16 @@ public class DialogManager : MonoBehaviour
         public int numChildren;
         public AudioClip audioClip;
         public bool hasPlayed;
+        public int animState;
 
-        public Dialog(string id, bool fromUser, string dialogText)
+        public Dialog(string id, bool fromUser, string dialogText, int animState)
         {
             keyPhrases = new List<string>();
             children = new List<Dialog>();
             this.id = id;
             this.fromUser = fromUser;
             this.dialogText = dialogText;
+            this.animState = animState;
             if (!fromUser)
             {
                 audioClip = Resources.Load("AudioClips\\" + id) as AudioClip;
@@ -78,52 +80,52 @@ public class DialogManager : MonoBehaviour
     {
         #region Build dialogs
         // First, build all the dialogs for all of the user's possible inputs and their static responses
-        Dialog user1 = new Dialog("user1", true, "Good morning, Mr. Andrews."); // Root node
+        Dialog user1 = new Dialog("user1", true, "Good morning, Mr. Andrews.", 0); // Root node
         user1.keyPhrases = new List<string>(){"good morning", "good", "morning"};
         dt = new DialogTree(user1);
 
-        Dialog resp11 = new Dialog("resp1", false, "Is it? I have been coming here for 2 years and I still don't have proper teeth.");
+        Dialog resp11 = new Dialog("resp1", false, "Is it? I have been coming here for 2 years and I still don't have proper teeth.", 1);
 
-        Dialog user21 = new Dialog("user2", true, "We will have time to discuss that, let's start with updating your medical history. I will now take your blood pressure.");
+        Dialog user21 = new Dialog("user2", true, "We will have time to discuss that, let's start with updating your medical history. I will now take your blood pressure.", 0);
         user21.keyPhrases = new List<string>(){ "updating", "medical", "history", "blood", "pressure" };
-        Dialog user22 = new Dialog("user3", true, "I'm sorry to hear that. May I know what the problem is?");
+        Dialog user22 = new Dialog("user3", true, "I'm sorry to hear that. May I know what the problem is?", 0);
         user22.keyPhrases = new List<string>(){"sorry", "problem"};
 
-        Dialog resp21 = new Dialog("resp2", false, "Why? I'm fine. I don't want you to take my blood pressure.");
-        Dialog resp22 = new Dialog("resp3", false, "This is crazy! Fine, go ahead.");
-        Dialog resp23 = new Dialog("resp4", false, "My student doctor is bad, I have tried to call my student doctor, but he never returned my call.");
-        Dialog resp24 = new Dialog("resp5", false, "I have spent so much time and money, but my treatment never finishes.");
+        Dialog resp21 = new Dialog("resp2", false, "Why? I'm fine. I don't want you to take my blood pressure.", 2);
+        Dialog resp22 = new Dialog("resp3", false, "This is crazy! Fine, go ahead.", 3);
+        Dialog resp23 = new Dialog("resp4", false, "My student doctor is bad, I have tried to call my student doctor, but he never returned my call.", 4);
+        Dialog resp24 = new Dialog("resp5", false, "I have spent so much time and money, but my treatment never finishes.", 5);
 
-        Dialog user31 = new Dialog("user4", true, "As I said, this is to protect you.");
+        Dialog user31 = new Dialog("user4", true, "As I said, this is to protect you.", 0);
         user31.keyPhrases = new List<string>(){"protect"};
-        Dialog user32 = new Dialog("user5", true, "I am sorry, but this is the clinic's protocol.");
+        Dialog user32 = new Dialog("user5", true, "I am sorry, but this is the clinic's protocol.", 0);
         user32.keyPhrases = new List<string>() {"sorry", "clinic", "protocol"};
-        Dialog user33 = new Dialog("user6", true, "Thank you. Do you have any medical problems that I should be aware of?");
+        Dialog user33 = new Dialog("user6", true, "Thank you. Do you have any medical problems that I should be aware of?", 0);
         user33.keyPhrases = new List<string>() {"medical", "problem", "aware"};
-        Dialog user34 = new Dialog("user7", true, "Thank you. How's your general health condition?");
+        Dialog user34 = new Dialog("user7", true, "Thank you. How's your general health condition?", 0);
         user34.keyPhrases = new List<string>() {"general", "health", "condition"};
-        Dialog user35 = new Dialog("user8", true, "Oh I am sorry to hear that, he has graduated and I will be your next student doctor.");
+        Dialog user35 = new Dialog("user8", true, "Oh I am sorry to hear that, he has graduated and I will be your next student doctor.", 0);
         user35.keyPhrases = new List<string>() {"graduated", "doctor"};
-        Dialog user36 = new Dialog("user9", true, "Oh I'm sorry. I will make sure that you will be taken care of right now.");
+        Dialog user36 = new Dialog("user9", true, "Oh I'm sorry. I will make sure that you will be taken care of right now.", 0);
         user36.keyPhrases = new List<string>() {"sure", "care"};
-        Dialog user37 = new Dialog("user10", true, "Oh I am sorry to hear that, let me look at your dental treatment history.");
+        Dialog user37 = new Dialog("user10", true, "Oh I am sorry to hear that, let me look at your dental treatment history.", 0);
         user37.keyPhrases = new List<string>() {"look", "dental", "treatment", "history"};
-        Dialog user38 = new Dialog("user11", true, "Oh I apologize for that. Do you mind if I ask you some questions?");
+        Dialog user38 = new Dialog("user11", true, "Oh I apologize for that. Do you mind if I ask you some questions?", 0);
         user38.keyPhrases = new List<string>() {"mind", "ask", "questions"};
 
-        Dialog resp31 = new Dialog("resp6", false, "Ok, fine.");
+        Dialog resp31 = new Dialog("resp6", false, "Ok, fine.", 6);
         //Dialog resp32 = new Dialog("resp7", false, "Really? Fine then.");
         //Dialog resp33 = new Dialog("resp8", false, "No, I am fine.");
-        Dialog resp34 = new Dialog("resp9", false, "Yes, I have high blood pressure.");
-        Dialog resp35 = new Dialog("resp10", false, "No, I am fine. Thank you.");
-        Dialog resp36 = new Dialog("resp11", false, "Well, I had colon cancer three years ago.");
+        Dialog resp34 = new Dialog("resp9", false, "Yes, I have high blood pressure.", 7);
+        Dialog resp35 = new Dialog("resp10", false, "No, I am fine. Thank you.", 8);
+        Dialog resp36 = new Dialog("resp11", false, "Well, I had colon cancer three years ago.", 9);
         //Dialog resp37 = new Dialog("resp12", false, "Okay, can I trust you?");
-        Dialog resp38 = new Dialog("resp13", false, "Okay, thank you.");
+        Dialog resp38 = new Dialog("resp13", false, "Okay, thank you.", 10);
         //Dialog resp39 = new Dialog("resp14", false, "Okay, thank God.");
-        Dialog resp310 = new Dialog("resp15", false, "Okay, I hope so too.");
+        Dialog resp310 = new Dialog("resp15", false, "Okay, I hope so too.", 10);
         //Dialog resp311 = new Dialog("resp16", false, "Can I talk to your instructor?");
-        Dialog resp312 = new Dialog("resp17", false, "Okay, I hope you can find a solution for me.");
-        Dialog resp313 = new Dialog("resp18", false, "Yes, please.");
+        Dialog resp312 = new Dialog("resp17", false, "Okay, I hope you can find a solution for me.", 11);
+        Dialog resp313 = new Dialog("resp18", false, "Yes, please.", 12);
         //Dialog resp314 = new Dialog("resp19", false, "I thought I had explained everything to you already.");
         #endregion
 
@@ -167,6 +169,11 @@ public class DialogManager : MonoBehaviour
         return dt.currentDialog;
     }
 
+    public int CurrentState()
+    {
+        return dt.currentDialog.animState;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -176,22 +183,24 @@ public class DialogManager : MonoBehaviour
     public void UpdateDialog(string userSpeech)
     {
         Dialog dialog = dt.currentDialog;
-        // If the last person to speak wasn't the patient
-        //if (!dialog.fromUser) return;
         // If the first dialog, update to first patient response
         if (dialog.id == "user1")
         {
-            dt.currentDialog = dt.currentDialog.children[0];
+            if (userSpeech.Contains(dialog.keyPhrases[0]) || userSpeech.Contains(dialog.keyPhrases[1]))
+            {
+                dt.currentDialog = dt.currentDialog.children[0];
+            }
             return;
         }
 
         // Figure out which option the user chose based on what they said
         // Look through the possible responses and switch the dialog to the one that the user probably chose
-        foreach(Dialog c in dialog.children) {
+        foreach (Dialog c in dialog.children) {
             for (int i = 0; i < c.keyPhrases.Count; i++)
             {
                 if (userSpeech.Contains(c.keyPhrases[i]))
                 {
+                    Debug.Log("Got a good response!");
                     dt.currentDialog = ChooseRandomChild(c);
                     break;
                 }
