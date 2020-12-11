@@ -68,7 +68,9 @@ namespace IBM.Watsson.Examples
         GameObject paul;
         GameObject logan;
         public Animator paulAnimator;
+        public Animator paulFaceAnimator;
         public Animator loganAnimator;
+        public Animator loganFaceAnimator;
 
         public bool isFirstChar;
         public AudioClip one;
@@ -99,12 +101,15 @@ namespace IBM.Watsson.Examples
             if (isFirstChar)
             {
                 Debug.Log("On look animation state: " + dm.CurrentState());
+                paulFaceAnimator.SetInteger("State", dm.CurrentState());
                 paulAnimator.SetInteger("State", dm.CurrentState());
+                
             }
             else
             {
                 Debug.Log("On look animation state: " + dm.CurrentState());
                 loganAnimator.SetInteger("State", dm.CurrentState());
+                loganFaceAnimator.SetInteger("State", dm.CurrentState());
             }
             StartRecording();
             Debug.Log("Working");
@@ -121,12 +126,16 @@ namespace IBM.Watsson.Examples
             if (isFirstChar)
             {
                 Debug.Log("Off look animation state: " + dm.CurrentState());
-                paulAnimator.SetInteger("State", dm.CurrentState());
+                int state = dm.CurrentState();
+                paulFaceAnimator.SetInteger("State", state);
+                paulAnimator.SetInteger("State", state);
             }
             else
             {
                 Debug.Log("Off look animation state: " + dm.CurrentState());
-                loganAnimator.SetInteger("State", dm.CurrentState());
+                int state = dm.CurrentState();
+                loganFaceAnimator.SetInteger("State", state);
+                loganAnimator.SetInteger("State", state);
             }
             if (!dm.CurrentDialog().hasPlayed)
                 changeClip(dm.CurrentClip());

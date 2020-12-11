@@ -192,7 +192,7 @@ PrefabInstance:
     - target: {fileID: 7421543585576943849, guid: d55e87b6034031945953b177956ec78d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d55e87b6034031945953b177956ec78d, type: 3}
@@ -470,8 +470,10 @@ MonoBehaviour:
   _iamApikey: NPi5zxVfkbrVNlcOUatS758PINeoc4lLzGOqBz4plCZh
   _recognizeModel: 
   paulAnimator: {fileID: 646936714}
+  paulFaceAnimator: {fileID: 2088939654}
   loganAnimator: {fileID: 806326807}
-  isFirstChar: 1
+  loganFaceAnimator: {fileID: 852154810}
+  isFirstChar: 0
   one: {fileID: 8300000, guid: 1f3a235fa54ca544da226ba3a271c32c, type: 3}
   onFinishSound:
     m_PersistentCalls:
@@ -1251,6 +1253,12 @@ PrefabInstance:
 --- !u!95 &806326807 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3433560257703471896, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5977189822493212460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &852154810 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4162057827680312803, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
     type: 3}
   m_PrefabInstance: {fileID: 5977189822493212460}
   m_PrefabAsset: {fileID: 0}
@@ -7108,6 +7116,12 @@ Transform:
   m_Father: {fileID: 1059136776}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2088939654 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1539501828344904483, guid: d55e87b6034031945953b177956ec78d,
+    type: 3}
+  m_PrefabInstance: {fileID: 18397060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2134891335
 GameObject:
   m_ObjectHideFlags: 0
@@ -9181,6 +9195,56 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b9701094e99161f4bab34f034cb107f5, type: 2}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5130172
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.28471753
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6574077
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.47282612
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01952217
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01525932
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02107978
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -59.259
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -52.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613373194442059972, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 139.856
+      objectReference: {fileID: 0}
     - target: {fileID: 5666781418802146577, guid: 46d77637b6724dc40ac2fa843f9d8cb5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

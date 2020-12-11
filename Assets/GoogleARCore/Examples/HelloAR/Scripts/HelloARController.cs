@@ -25,6 +25,7 @@ namespace GoogleARCore.Examples.HelloAR
     using GoogleARCore.Examples.Common;
     using UnityEngine;
     using UnityEngine.EventSystems;
+    using IBM.Watsson.Examples;
 
 #if UNITY_EDITOR
     // Set up touch input propagation while using Instant Preview in the editor.
@@ -47,6 +48,7 @@ namespace GoogleARCore.Examples.HelloAR
         /// </summary>
         public Camera FirstPersonCamera;
 
+        /*
         /// <summary>
         /// A prefab to place when a raycast from a user touch hits a vertical plane.
         /// </summary>
@@ -61,6 +63,10 @@ namespace GoogleARCore.Examples.HelloAR
         /// A prefab to place when a raycast from a user touch hits a feature point.
         /// </summary>
         public GameObject GameObjectPointPrefab;
+        */
+        public ARStreaming ars;
+        public GameObject paul;
+        public GameObject logan;
 
         /// <summary>
         /// The rotation in degrees need to apply to prefab when it is placed.
@@ -73,7 +79,7 @@ namespace GoogleARCore.Examples.HelloAR
         /// </summary>
         private bool m_IsQuitting = false;
 
-        private GameObject character;
+        public GameObject character;
         public bool unlocked = true;
 
         /// <summary>
@@ -138,23 +144,27 @@ namespace GoogleARCore.Examples.HelloAR
                     GameObject prefab;
                     if (hit.Trackable is FeaturePoint)
                     {
-                        prefab = GameObjectPointPrefab;
+                        prefab = GetCharacter();
+                        //prefab = GameObjectPointPrefab;
                     }
                     else if (hit.Trackable is DetectedPlane)
                     {
                         DetectedPlane detectedPlane = hit.Trackable as DetectedPlane;
                         if (detectedPlane.PlaneType == DetectedPlaneType.Vertical)
                         {
-                            prefab = GameObjectVerticalPlanePrefab;
+                            prefab = GetCharacter();
+                            //prefab = GameObjectVerticalPlanePrefab;
                         }
                         else
                         {
-                            prefab = GameObjectHorizontalPlanePrefab;
+                            prefab = GetCharacter();
+                            //prefab = GameObjectHorizontalPlanePrefab;
                         }
                     }
                     else
                     {
-                        prefab = GameObjectHorizontalPlanePrefab;
+                        prefab = GetCharacter();
+                        //prefab = GameObjectHorizontalPlanePrefab;
                     }
 
                     if (character == null)
@@ -163,6 +173,7 @@ namespace GoogleARCore.Examples.HelloAR
                         character = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
                         // Compensate for the hitPose rotation facing away from the raycast (i.e.
                         // camera).
+
                         character.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
                     }
                     else
@@ -171,6 +182,7 @@ namespace GoogleARCore.Examples.HelloAR
                         if (unlocked)
                         {
                             character.transform.position = hit.Pose.position;
+                            character.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
                         }
                     }
 
@@ -256,6 +268,12 @@ namespace GoogleARCore.Examples.HelloAR
                     toastObject.Call("show");
                 }));
             }
+        }
+
+        private GameObject GetCharacter()
+        {
+            if (ars.isFirstChar) return paul;
+            else return logan;
         }
     }
 }
