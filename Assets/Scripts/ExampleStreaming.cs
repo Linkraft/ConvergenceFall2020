@@ -125,14 +125,14 @@ namespace IBM.Watsson.Examples
             dm.UpdateDialog(userSpeech);
             if (isFirstChar)
             {
-                Debug.Log("Off look animation state: " + dm.CurrentState());
+                //Debug.Log("Off look animation state: " + dm.CurrentState());
                 int state = dm.CurrentState();
                 paulFaceAnimator.SetInteger("State", state);
                 paulAnimator.SetInteger("State", state);
             }
             else
             {
-                Debug.Log("Off look animation state: " + dm.CurrentState());
+                //Debug.Log("Off look animation state: " + dm.CurrentState());
                 int state = dm.CurrentState();
                 loganFaceAnimator.SetInteger("State", state);
                 loganAnimator.SetInteger("State", state);
@@ -143,7 +143,7 @@ namespace IBM.Watsson.Examples
 
         public void changeClip(AudioClip example)
         {
-            Debug.Log("Example:" + example.name);
+            //Debug.Log("Example:" + example.name);
             audioSource = GetComponent<AudioSource>();
             audioSource.clip = example;
             audioSource.Play();

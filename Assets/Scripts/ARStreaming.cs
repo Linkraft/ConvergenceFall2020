@@ -73,7 +73,7 @@ namespace IBM.Watsson.Examples
         Animator loganAnimator;
         Animator loganFaceAnimator;
 
-        HelloARController harController;
+        public HelloARController helloARController;
 
         bool characterLoaded;
         public bool isFirstChar;
@@ -90,8 +90,8 @@ namespace IBM.Watsson.Examples
 
         private void Update()
         {
-            if (isFirstChar) paul = harController.character;
-            else logan = harController.character;
+            if (isFirstChar) paul = helloARController.character;
+            else logan = helloARController.character;
 
             if (paul != null)
             {

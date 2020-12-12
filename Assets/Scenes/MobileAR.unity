@@ -2578,6 +2578,7 @@ MonoBehaviour:
   dm: {fileID: 1088220011}
   _iamApikey: NPi5zxVfkbrVNlcOUatS758PINeoc4lLzGOqBz4plCZh
   _recognizeModel: 
+  helloARController: {fileID: 1958769045}
   isFirstChar: 1
   onFinishSound:
     m_PersistentCalls:

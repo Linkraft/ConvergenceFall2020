@@ -174,7 +174,9 @@ namespace GoogleARCore.Examples.HelloAR
                         // Compensate for the hitPose rotation facing away from the raycast (i.e.
                         // camera).
 
-                        character.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
+                        //character.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
+                        character.transform.LookAt(Camera.main.transform.position, -Vector3.up);
+                        character.transform.localEulerAngles = new Vector3(0, character.transform.localEulerAngles.y + 80, 0);
                     }
                     else
                     {
@@ -182,7 +184,8 @@ namespace GoogleARCore.Examples.HelloAR
                         if (unlocked)
                         {
                             character.transform.position = hit.Pose.position;
-                            character.transform.Rotate(0, k_PrefabRotation, 0, Space.Self);
+                            character.transform.LookAt(Camera.main.transform.position, -Vector3.up);
+                            character.transform.localEulerAngles = new Vector3(0, character.transform.localEulerAngles.y + 90, 0);
                         }
                     }
 

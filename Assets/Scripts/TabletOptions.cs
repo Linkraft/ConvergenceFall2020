@@ -6,14 +6,13 @@ using UnityEngine;
 public class TabletOptions : MonoBehaviour
 {
     public TMP_Text optionsText;
-    public DialogManager dm;
+    DialogManager dm;
 
     private void Start()
     {
         if (optionsText == null)
             optionsText = GameObject.Find("Options Text").GetComponent<TMP_Text>();
-        if (dm == null)
-            dm = FindObjectOfType<DialogManager>();
+        dm = FindObjectOfType<DialogManager>();
     }
 
     private void Update()

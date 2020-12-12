@@ -206,7 +206,7 @@ public class DialogManager : MonoBehaviour
                 }
             }
         }
-        Debug.Log("Current dialog: " + dt.currentDialog.id);
+        //Debug.Log("Current dialog: " + dt.currentDialog.id);
     }
 
     public List<string> GetNextDialogOptions()
